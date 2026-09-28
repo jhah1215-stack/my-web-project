@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>이준형의 인터랙티브 웹</title>
+    <style>
+        /* CSS: 웹사이트를 예쁘게 꾸미는 부분 (살점/옷) */
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+            transition: background-color 0.5s; /* 배경색이 부드럽게 변하게 함 */
+        }
+        .container {
+            text-align: center;
+            padding: 40px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        h1 { color: #1a237e; }
+        button {
+            padding: 12px 24px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #1a237e;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+        button:active { transform: scale(0.95); } /* 버튼 누를 때 살짝 작아지는 효과 */
+        #message {
+            margin-top: 25px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #ff4081;
+            min-height: 30px; /* 글자가 나타날 공간 미리 확보 */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>반갑습니다! 👋</h1>
+        <p>아래 버튼을 눌러서 마법을 확인해보세요.</p>
+        
+        <!-- 버튼 클릭 시 runMagic() 이라는 JavaScript 함수를 실행함 -->
+        <button onclick="runMagic()">마법 버튼 클릭!</button>
+        
+        <!-- JavaScript가 글자를 써넣을 빈 공간 -->
+        <div id="message"></div>
+    </div>
+
+    <script>
+        // JavaScript: 웹사이트에 '두뇌'를 달아주는 부분
+        function runMagic() {
+            // 1. HTML에서 id가 'message'인 요소를 찾아 메모리에 가져옵니다.
+            const messageElement = document.getElementById('message');
+            
+            // 2. 그 요소의 내용을 마법처럼 바꿉니다.
+            messageElement.innerText = "✨ 짜잔! JavaScript가 작동합니다! ✨";
+            
+            // 3. 배경색도 부드럽게 바꿔봅시다!
+            document.body.style.backgroundColor = "#e8f5e9";
+        }
+    </script>
+
+</body>
+</html>
