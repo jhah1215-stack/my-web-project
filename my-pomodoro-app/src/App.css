@@ -1,0 +1,104 @@
+/* App.css */
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  /* 기본 배경색 */
+  background-color: #f0f2f5; 
+  font-family: sans-serif;
+  transition: background-color 0.5s ease; /* 색상이 부드럽게 변하게 함 */
+}
+
+/* 집중 모드일 때의 배경색 (PDF 느낌의 초록색 계열) */
+.app-container.focus-mode {
+  background-color: #e8f5e9; 
+}
+
+/* 휴식 모드일 때의 배경색 (PDF 느낌의 빨간색/분홍색 계열) */
+.app-container.break-mode {
+  background-color: #ffebee;
+}
+
+.card {
+  text-align: center;
+  padding: 40px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 320px;
+}
+
+h1 {
+  margin: 0;
+  color: #333;
+  font-size: 24px;
+}
+
+.time {
+  font-size: 72px;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #2c3e50;
+}
+
+.mode-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* 모드 선택 버튼 스타일 */
+.mode-buttons button {
+  background-color: #eee;
+  color: #666;
+}
+
+.mode-buttons button.active {
+  background-color: #333;
+  color: white;
+}
+
+/* 컨트롤 버튼 스타일 */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.start-btn {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.stop-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.reset-btn {
+  background-color: #95a5a5;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.session-count {
+  margin-top: 20px;
+  color: #7f8c8d;
+  font-size: 14px;
+}
